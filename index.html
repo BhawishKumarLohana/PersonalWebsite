@@ -19,40 +19,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="app.js" type="JavaScript"></script>
+    <script  src="particles.js" type="JavaScript"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
     <title>Bhawish Kumar</title>
 </head>
 <body>
 <!-- Container for the hero section -->
+<!-- Hero section with local background image -->
 <div class="relative h-screen">
-    <!-- Hero section with local background image -->
-    <div class="relative h-screen bg-cover bg-center" style="background-image: url('bg.jpg');">
-      <div class="absolute inset-0 bg-[#1b365d] bg-opacity-80"></div>
-      <div class="relative z-10 flex flex-col items-center justify-center h-full px-4 text-white">
-        <div>
-          <h1 class="text-5xl font-bold mb-2">Bhawish Kumar</h1>
-          <p class="text-lg text-gray-300 text-center">Programmer • ML Engineer • Seeker</p>
-        </div>
-        <div class="mt-8 flex space-x-4">
-          <a aria-label="My LinkedIn Profile" target="_blank" href="https://www.linkedin.com/in/bhawish-kumar-lohana/">
-            <i class="fab fa-linkedin text-gray-400 hover:text-blue-500 text-6xl"></i>
-          </a>
-          <a aria-label="My Github Profile" target="_blank" href="https://github.com/BhawishKumar009">
-            <i class="fab fa-github-alt text-gray-400 hover:text-gray-100 text-6xl"></i>
-          </a>
-          <a aria-label="My Résumé" target="_blank" href="https://drive.google.com/file/d/1Jqpf5MINyXSEg87xJRBEDrXH3n11DzJ1/view?usp=sharing">
-            <i class="far fa-file-pdf text-gray-400 hover:text-red-500 text-6xl"></i>
-          </a>
-          <a aria-label="Send Email" href="mailto:bhawishkumar000@gmail.com" target="_blank">
-            <i class="far fa-envelope text-gray-400 hover:text-yellow-500 text-6xl"></i>
-          </a>
-        </div>
-        <a href="#about" class="mt-8 text-white hover:text-gray-400 cursor-pointer">
-          <i class="fas fa-arrow-down text-4xl"></i>
+  <div class="relative h-screen bg-blue-600 animate-pulse">
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-4xl font-bold">
+      <div>
+        <h1 class="text-5xl font-bold mb-2">Bhawish Kumar</h1>
+        <p class="text-lg text-gray-300 text-center">Programmer •Aspiring ML Engineer</p>
+      </div>
+      <div class="mt-8 flex space-x-4">
+        <a aria-label="My LinkedIn Profile" target="_blank" href="https://www.linkedin.com/in/bhawish-kumar-lohana/">
+          <i class="fab fa-linkedin text-gray-400 hover:text-blue-500 text-6xl"></i>
+        </a>
+        <a aria-label="My Github Profile" target="_blank" href="https://github.com/BhawishKumar009">
+          <i class="fab fa-github-alt text-gray-400 hover:text-gray-100 text-6xl"></i>
+        </a>
+        <a aria-label="My Résumé" target="_blank" href="https://drive.google.com/file/d/1Jqpf5MINyXSEg87xJRBEDrXH3n11DzJ1/view?usp=sharing">
+          <i class="far fa-file-pdf text-gray-400 hover:text-red-500 text-6xl"></i>
+        </a>
+        <a aria-label="Send Email" href="mailto:bhawishkumar000@gmail.com" target="_blank">
+          <i class="far fa-envelope text-gray-400 hover:text-yellow-500 text-6xl"></i>
         </a>
       </div>
+      <a href="#about" class="mt-8 text-white hover:text-gray-400 cursor-pointer">
+        <i class="fas fa-arrow-down text-4xl"></i>
+      </a>
     </div>
+  </div>
+</div>
   
     <!-- Next section with a different background -->
     <div id="about" class="bg-white py-20">
@@ -69,9 +71,7 @@
         </picture>
       </div>
       <p class="text-base md:text-lg lg:text-xl">
-        Hello, my name is Bhawish and I'm a 20 year old Student based in Hong Kong. I'm passionate
-        about Machine Learning and Conciouness and I'm always eager to learn and grow. In my free time, you can find me Cycling.
-        I'm excited to share my journey with you and collaborate on exciting projects together.Let's do it.
+        I'm Bhawish Kumar, a second-year computer science major at Hong Kong Baptist University. As an aspiring Machine Learning Engineer, I've cultivated a strong foundation in Python, leveraging various libraries and frameworks to tackle complex problems. During my internships, I've tackled diverse STEM-related tasks, mastering HTML, CSS, React, and Sails.js to create innovative digital experiences. But what truly drives me is my insatiable thirst for knowledge. I'm constantly exploring new frontiers, eager to learn and grow, fueling my pursuit of excellence as I strive to become a trailblazer in the field of Machine Learning Engineering.
       </p>
     </div>
     <br>
@@ -174,24 +174,50 @@
           <img src="Chess.png" alt="2D Chess in Python Processing" class="w-full h-48 object-cover">
           <div class="p-4">
             <h3 class="text-lg font-bold text-gray-800 mb-2">2D Chess in Python Processing</h3>
-            <p class="text-gray-600 mb-4">This 2D chess game implementation in Python demonstrates a creative twist on the classic chess gameplay. By allowing the capture of the King, the game introduces a fresh and exciting dynamic that challenges traditional chess strategies...</p>
+            <p class="text-gray-600 mb-4">This 2D chess game in Python adds an exciting twist by allowing the capture of the King, challenging traditional chess strategies.</p>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-wrap">
+                <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2">Python</span>
+              </div>
+              <a aria-label="My Github Profile" target="_blank" href="https://github.com/BhawishKumar009/2-D-Chess-in-Processing">
+                <i class="fab fa-github-alt text-black-100 hover:text-gray-100 text-3xl"></i>
+              </a>
+            </div>
           </div>
         </div>
         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
           <img src="translator.jpg" alt="Image-Language-Translator" class="w-full h-48 object-cover">
           <div class="p-4">
             <h3 class="text-lg font-bold text-gray-800 mb-2">Image-Language-Translator</h3>
-            <p class="text-gray-600 mb-4">The project is an Image-Language Translator that extracts text from images using OCR and translates it into the desired language. It enables users to understand and translate foreign language content in images quickly and conveniently.</p>
+            <p class="text-gray-600 mb-4">This Image-Language Translator uses OCR to extract text from images, then translates it to the desired language, enabling convenient foreign text understanding.</p>
+            <div class="flex items-center justify-between mt-4">
+              <div class="flex flex-wrap">
+                <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2">Python</span>
+                <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2">EasyOCR</span>
+              </div>
+              <a aria-label="My Github Profile" target="_blank" href="https://github.com/BhawishKumar009/2-D-Chess-in-Processing">
+                <i class="fab fa-github-alt text-black-100 hover:text-gray-100 text-3xl"></i>
+              </a>
+            </div>
           </div>
         </div>
         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
           <img src="finder.png" alt="University Finder" class="w-full h-48 object-cover">
           <div class="p-4">
             <h3 class="text-lg font-bold text-gray-800 mb-2">University Finder</h3>
-            <p class="text-gray-600 mb-4">The project is a location-based university search application that allows users to explore universities in different countries. By leveraging the Google Maps Geocoding API, the application retrieves the geographical coordinates and addresses of universities based on user input. The gathered information is then stored in a SQLite database for future</p>
+            <p class="text-gray-600 mb-4">This university search app uses Google Maps Geocoding API to retrieve and store university location data, enabling users to explore universities worldwide.</p>
+            <div class="flex items-center justify-between mt-4">
+              <div class="flex flex-wrap">
+                <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2">Python</span>
+                <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2">Geocoding API</span>
+                <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2">SQLite</span>
+              </div>
+              <a aria-label="My Github Profile" target="_blank" href="https://github.com/BhawishKumar009/2-D-Chess-in-Processing">
+                <i class="fab fa-github-alt text-black-100 hover:text-gray-100 text-3xl"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
     </div>
   </section>
        
@@ -199,6 +225,16 @@
     </div>
   </div>
   <style>
+    @keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+    
     .bg-white:hover {
       transform: scale(1.05);
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
