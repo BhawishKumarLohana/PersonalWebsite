@@ -28,35 +28,35 @@
 <body>
 <!-- Container for the hero section -->
 <!-- Hero section with local background image -->
-<div class="relative h-screen">
-  <div class="relative h-screen bg-blue-600 animate-pulse">
-    <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-4xl font-bold">
-      <div>
-        <h1 class="text-5xl font-bold mb-2">Bhawish Kumar</h1>
-        <p class="text-lg text-gray-300 text-center">Programmer •Aspiring ML Engineer</p>
-      </div>
-      <div class="mt-8 flex space-x-4">
-        <a aria-label="My LinkedIn Profile" target="_blank" href="https://www.linkedin.com/in/bhawish-kumar-lohana/">
-          <i class="fab fa-linkedin text-gray-400 hover:text-blue-500 text-6xl"></i>
-        </a>
-        <a aria-label="My Github Profile" target="_blank" href="https://github.com/BhawishKumar009">
-          <i class="fab fa-github-alt text-gray-400 hover:text-gray-100 text-6xl"></i>
-        </a>
-        <a aria-label="My Résumé" target="_blank" href="https://drive.google.com/file/d/1Jqpf5MINyXSEg87xJRBEDrXH3n11DzJ1/view?usp=sharing">
-          <i class="far fa-file-pdf text-gray-400 hover:text-red-500 text-6xl"></i>
-        </a>
-        <a aria-label="Send Email" href="mailto:bhawishkumar000@gmail.com" target="_blank">
-          <i class="far fa-envelope text-gray-400 hover:text-yellow-500 text-6xl"></i>
-        </a>
-      </div>
-      <a href="#about" class="mt-8 text-white hover:text-gray-400 cursor-pointer">
-        <i class="fas fa-arrow-down text-4xl"></i>
+<div class="relative h-screen overflow-y-auto">
+  <div id="container"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-4xl font-bold">
+    <div>
+      <h1 class="text-5xl font-bold mb-2">Bhawish Kumar</h1>
+      <p class="text-lg text-gray-300 text-center">Programmer • Aspiring ML Engineer</p>
+    </div>
+    <div class="mt-8 flex space-x-4">
+      <a aria-label="My LinkedIn Profile" target="_blank" href="https://www.linkedin.com/in/bhawish-kumar-lohana/">
+        <i class="fab fa-linkedin text-gray-400 hover:text-blue-500 text-6xl"></i>
+      </a>
+      <a aria-label="My Github Profile" target="_blank" href="https://github.com/BhawishKumar009">
+        <i class="fab fa-github-alt text-gray-400 hover:text-gray-100 text-6xl"></i>
+      </a>
+      <a aria-label="My Résumé" target="_blank" href="https://drive.google.com/file/d/1Jqpf5MINyXSEg87xJRBEDrXH3n11DzJ1/view?usp=sharing">
+        <i class="far fa-file-pdf text-gray-400 hover:text-red-500 text-6xl"></i>
+      </a>
+      <a aria-label="Send Email" href="mailto:bhawishkumar000@gmail.com" target="_blank">
+        <i class="far fa-envelope text-gray-400 hover:text-yellow-500 text-6xl"></i>
       </a>
     </div>
+    <a href="#about" class="mt-8 text-white hover:text-gray-400 cursor-pointer">
+      <i class="fas fa-arrow-down text-4xl"></i>
+    </a>
   </div>
 </div>
-  
-    <!-- Next section with a different background -->
+
+<!-- Next section with a different background -->
     <div id="about" class="bg-white py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-bold text-gray-900 mb-8">About Me</h2>
@@ -263,35 +263,73 @@
       </div>
     </div>
   </div>
+  
+  
+  
+  <script>
+    // Set up the scene
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById('container').appendChild(renderer.domElement);
+
+    // Create the particles
+    const particleCount = 100000;
+    const particleGeometry = new THREE.BufferGeometry();
+    const particlePositions = new Float32Array(particleCount * 3);
+    for (let i = 0; i < particleCount; i++) {
+        particlePositions[i * 3] = (Math.random() - 0.5) * window.innerWidth;
+        particlePositions[i * 3 + 1] = (Math.random() - 0.5) * window.innerHeight;
+        particlePositions[i * 3 + 2] = (Math.random() - 0.5) * 100;
+    }
+    particleGeometry.setAttribute('position', new THREE.BufferAttribute(particlePositions, 3));
+    const particleMaterial = new THREE.PointsMaterial({ color: 0x0000ff, size: 1 });
+    const particles = new THREE.Points(particleGeometry, particleMaterial);
+    scene.add(particles);
+
+    // Add some lights
+    const ambientLight = new THREE.AmbientLight(0x404040);
+    scene.add(ambientLight);
+    const pointLight = new THREE.PointLight(0xffffff, 1, 100);
+    pointLight.position.set(0, 0, 50);
+    scene.add(pointLight);
+
+    // Camera position
+    camera.position.z = 1000;
+
+    // Animate the particles
+    function animate() {
+      requestAnimationFrame(animate);
+      particles.rotation.x += 0.001;
+      particles.rotation.y += 0.001;
+      renderer.render(scene, camera);
+    }
+    animate();
+  </script>
   <style>
-    @keyframes pulse {
+    body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #container {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+  }
+  @keyframes pulse {
   50% {
     opacity: .5;
   }
-}
-
-.animate-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-    
-    .bg-white:hover {
+  }
+  .bg-white:hover {
       transform: scale(1.05);
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
       transition: all 0.3s ease-in-out;
     }
+
   </style>
-  
-  <script>
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
     
 </body>
 </html>
