@@ -78,7 +78,107 @@
     </div>
     <br>
     <br>
-  
+    <style>
+      .timeline-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: #f9fafb;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+    
+      .timeline-item {
+        position: relative;
+        padding-left: 1.5rem;
+        margin-bottom: 2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+    
+      .timeline-item:before {
+        content: "";
+        position: absolute;
+        top: 0.5rem;
+        left: 0;
+        width: 0.75rem;
+        height: 0.75rem;
+        background-color: #6366f1;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        box-shadow: 0 0 0 2px #6366f1;
+      }
+    
+      .timeline-item-content {
+        max-height: 3.5rem;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+    
+      .timeline-item:hover {
+        transform: translateX(0.5rem);
+      }
+    
+      .timeline-item:hover .timeline-item-content {
+        max-height: 500px;
+      }
+    
+      .timeline-item-summary {
+        font-weight: bold;
+        color: #6366f1;
+        margin-bottom: 0.5rem;
+      }
+    </style>
+    
+    <div class="timeline-container">
+      <div class="flex flex-col md:flex-row justify-center items-start space-y-8 md:space-y-0 md:space-x-12">
+        <div class="flex flex-col items-start">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-4">Education</h2>
+          <div class="timeline-item">
+            <div class="timeline-item-summary">Bachelor's Degree in Computer Science</div>
+            <div class="timeline-item-content">
+              <h3 class="text-lg font-semibold text-gray-800">Hong Kong Baptist University</h3>
+              <time class="block mb-2 text-sm font-normal leading-none text-gray-400">2023 - 2027</time>
+              <div class="timeline-item-content font-normal text-gray-500"> <ul> <li>Full Scholarship for Overseas Applicants</li> <li>CGPA: 3.70</li></li> </ul> </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-item-summary">GCE A-Levels</div>
+            <div class="timeline-item-content">
+              <h3 class="text-lg font-semibold text-gray-900">Beaconhouse Defence Karachi</h3>
+              <time class="block mb-2 text-sm font-normal leading-none text-gray-400">2016 - 2018</time>
+              <p class="font-normal text-gray-500">Completed at the Sydney Institute of Technology</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-start">
+          <h2 class="text-2xl font-semibold text-gray-900 mb-4">Work Experience</h2>
+          <div class="timeline-item">
+            <div class="timeline-item-summary">Software Developer Intern</div>
+            <div class="timeline-item-content">
+              <h3 class="text-lg font-semibold text-gray-900">Language Centre, Hong Kong Baptist University</h3>
+              <time class="block mb-2 text-sm font-normal leading-none text-gray-400">2024 - Present</time>
+              <p class="font-normal text-gray-500">Developing and maintaining web applications for a leading tech startup in Sydney.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-item-summary">Software Engineering Fellow</div>
+            <div class="timeline-item-content">
+              <h3 class="text-lg font-semibold text-gray-900">Headstarter AI</h3>
+              <time class="block mb-2 text-sm font-normal leading-none text-gray-400">2020 - 2022</time>
+              <p class="font-normal text-gray-500">Provided IT support and troubleshooting for a medium-sized accounting firm in Sydney.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      function toggleTimelineItem(element) {
+        const description = element.querySelector('p');
+        description.classList.toggle('hidden');
+      }
+    </script>
     <!-- User Specifics -->
     <div class="flex flex-col md:flex-row justify-between px-4 py-2 space-x-4">
         <div class="w-full md:w-1/2 bg-gray-100 p-8 rounded-lg shadow-lg">
