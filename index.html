@@ -59,128 +59,210 @@
 </div>
 
 <!-- Next section with a different background -->
+ <div>
+  
+ </div>
+ 
     <div id="about" class="bg-white py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8">About Me</h2>
-        <!-- About Section -->
-<section id="about" class="py-12 md:py-16 lg:py-20">
+
+        <div class="flex justify-center space-x-4">
+          <button id="myStoryButton" class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-md transition-colors duration-300">
+            My Story
+          </button>
+          <button class="px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-md transition-colors duration-300" id="ExpButton">
+            Experience
+          </button>
+          <button class="px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white rounded-md transition-colors duration-300" id="ProjectButton">
+            Projects
+          </button>
+          <button class="px-6 py-3 bg-red-500 hover:bg-red-600 text-white rounded-md transition-colors duration-300" id="OtherButton">
+            Other
+          </button>
+        </div>
+        
+
+
+
+
+
+
+
+
+
+ <!-- About Section -->
+<section  class="py-12 md:py-16 lg:py-20 ">
     <!-- User Introduction -->
-    <div class="user-details text-center">
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">My Story</h1>
-      <div class="w-36 md:w-40 lg:w-44 mx-auto rounded-full mb-6 overflow-hidden">
-        <picture>
-          <img src="picture.png" alt="Profile Picture" class="w-full h-full object-cover" />
-        </picture>
+    <div class="bg-white rounded-lg shadow-lg p-6 mb-8" id="myStoryContainer">
+      <div class="flex justify-center mb-6">
+        <div class="relative">
+          <img src="picture.png" alt="Profile Picture" class="rounded-full w-24 h-24 object-cover">
+        </div>
       </div>
-      <p class="text-base md:text-lg lg:text-xl">
-        I'm Bhawish Kumar, a second-year computer science major at Hong Kong Baptist University. As an aspiring Machine Learning Engineer, I've cultivated a strong foundation in Python, leveraging various libraries and frameworks to tackle complex problems. During my internships, I've tackled diverse STEM-related tasks, mastering HTML, CSS, React, and Sails.js to create innovative digital experiences. But what truly drives me is my insatiable thirst for knowledge. I'm constantly exploring new frontiers, eager to learn and grow, fueling my pursuit of excellence as I strive to become a trailblazer in the field of Machine Learning Engineering.
-      </p>
-    </div>
-    <br>
-    <br>
-    <style>
-      .timeline-container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem;
-        background-color: #f9fafb;
-        border-radius: 0.5rem;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      }
     
-      .timeline-item {
-        position: relative;
-        padding-left: 1.5rem;
-        margin-bottom: 2rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-    
-      .timeline-item:before {
-        content: "";
-        position: absolute;
-        top: 0.5rem;
-        left: 0;
-        width: 0.75rem;
-        height: 0.75rem;
-        background-color: #6366f1;
-        border-radius: 50%;
-        border: 2px solid #fff;
-        box-shadow: 0 0 0 2px #6366f1;
-      }
-    
-      .timeline-item-content {
-        max-height: 3.5rem;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-      }
-    
-      .timeline-item:hover {
-        transform: translateX(0.5rem);
-      }
-    
-      .timeline-item:hover .timeline-item-content {
-        max-height: 500px;
-      }
-    
-      .timeline-item-summary {
-        font-weight: bold;
-        color: #6366f1;
-        margin-bottom: 0.5rem;
-      }
-    </style>
-    
-    <div class="timeline-container">
-      <div class="flex flex-col md:flex-row justify-center items-start space-y-8 md:space-y-0 md:space-x-12">
-        <div class="flex flex-col items-start">
-          <h2 class="text-2xl font-semibold text-gray-900 mb-4">Education</h2>
-          <div class="timeline-item">
-            <div class="timeline-item-summary">Bachelor's Degree in Computer Science</div>
-            <div class="timeline-item-content">
-              <h3 class="text-lg font-semibold text-gray-800">Hong Kong Baptist University</h3>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-400">2023 - 2027</time>
-              <div class="timeline-item-content font-normal text-gray-500"> <ul> <li>Full Scholarship for Overseas Applicants</li> <li>CGPA: 3.70</li></li> </ul> </div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-item-summary">GCE A-Levels</div>
-            <div class="timeline-item-content">
-              <h3 class="text-lg font-semibold text-gray-900">Beaconhouse Defence Karachi</h3>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-400">2021-2023</time>
-              <p class="font-normal text-gray-500">Grades: 4 As, Computer Science, Mathematics, Physics, Chemistry</p>
-            </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-lg font-bold mb-2">Place of Birth</h3>
+          <div class="bg-blue-100 rounded-lg p-4 flex items-center">
+            <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span class="text-blue-700">Mirpur Khas, Pakistan</span>
           </div>
         </div>
-        <div class="flex flex-col items-start">
-          <h2 class="text-2xl font-semibold text-gray-900 mb-4">Work Experience</h2>
-          <div class="timeline-item">
-            <div class="timeline-item-summary">Software Developer Intern</div>
-            <div class="timeline-item-content">
-              <h3 class="text-lg font-semibold text-gray-900">Language Centre, Hong Kong Baptist University</h3>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-400">2024 - Present</time>
-              <p class="font-normal text-gray-500">The internship was part of the HKSAR Government's STEM Internship Programme, involving tasks like conference presentations, ML-powered accessibility improvements, Notion API integration, and website codebase work.</p>
-            </div>
+        <div>
+          <h3 class="text-lg font-bold mb-2">Currently Living In</h3>
+          <div class="bg-green-100 rounded-lg p-4 flex items-center">
+            <svg class="h-6 w-6 text-green-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span class="text-green-700">Hong Kong SAR, China</span>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-item-summary">Software Engineering Fellow</div>
-            <div class="timeline-item-content">
-              <h3 class="text-lg font-semibold text-gray-900">Headstarter AI</h3>
-              <time class="block mb-2 text-sm font-normal leading-none text-gray-400">2020 - 2022</time>
-              <p class="font-normal text-gray-500">Provided IT support and troubleshooting for a medium-sized accounting firm in Sydney.</p>
+        </div>
+      </div>
+      <br>
+      <br>
+      <h3 class="text-lg font-bold mb-2">Education</h3>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="relative border-l-2 border-gray-300">
+          <div class="space-y-8">
+            <div class="relative">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-white border-2 border-green-500 rounded-full"></div>
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-lg font-semibold text-gray-800">BSc (Hons) Computer Science</h3>
+                <div class="flex items-center text-gray-500 mb-4">
+                  <span class="mr-2 font-semibold">Hong Kong Baptist University</span>
+                  <span class="px-2 py-1 bg-gray-100 rounded-full text-sm font-semibold">2023 - 2027</span>
+                </div>
+                <ul class="space-y-2 text-gray-600">
+                  <li>Full Scholarship for Overseas Applicants (2 Awards)</li>
+                  <li>
+                    Academic Honours:
+                    <ul class="list-disc pl-4 space-y-1">
+                      <li>Semester 1, 2023-2024: President's Honour Roll</li>
+                      <li>Semester 2, 2023-2024: President's Honour Roll</li>
+                    </ul>
+                  </li>
+                  <li>CGPA: 3.70</li>
+                </ul>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-white border-2 border-blue-500 rounded-full"></div>
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-lg font-semibold text-gray-800">GCE A-Levels</h3>
+                <div class="flex items-center text-gray-500 mb-4">
+                  <span class="mr-2 font-semibold">Beaconhouse College Programme</span>
+                  <span class="px-2 py-1 bg-gray-100 rounded-full text-sm font-semibold">2021 - 2023</span>
+                </div>
+                <p class="text-gray-600">Grades: 4 As, Computer Science, Mathematics, Physics, Chemistry</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    
+      <div class="mt-8">
+        <h3 class="text-lg font-bold mb-2">Languages I Speak</h3>
+    
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="bg-blue-100 rounded-lg p-4 flex items-center">
+            <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+            <span class="text-blue-700">English (Fluent)</span>
+          </div>
+    
+          <div class="bg-green-100 rounded-lg p-4 flex items-center">
+            <svg class="h-6 w-6 text-green-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+            <span class="text-green-700">Urdu (Fluent)</span>
+          </div>
+    
+          <div class="bg-yellow-100 rounded-lg p-4 flex items-center">
+            <svg class="h-6 w-6 text-yellow-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+            <span class="text-yellow-700">Mandarin Chinese (Beginner)</span>
+          </div>
+    
+          <div class="bg-purple-100 rounded-lg p-4 flex items-center">
+            <svg class="h-6 w-6 text-purple-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            </svg>
+            <span class="text-purple-700">Sindhi (Mother Tongue)</span>
+          </div>
+        </div>
+      </div>
+    
+      
     </div>
     
-    <script>
-      function toggleTimelineItem(element) {
-        const description = element.querySelector('p');
-        description.classList.toggle('hidden');
-      }
-    </script>
+    <div class="timeline-container hidden" id="ExpContainer">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="relative border-l-2 border-gray-300">
+          <div class="space-y-8">
+            <div class="relative">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-white border-2 border-green-500 rounded-full"></div>
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-lg font-semibold text-gray-800">Software Developer Intern</h3>
+                <div class="flex items-center text-gray-500 mb-4">
+                  <span class="mr-2 font-semibold">Language Center, Hong Kong Baptist University</span>
+                  <span class="px-2 py-1 bg-gray-100 rounded-full text-sm font-semibold">June-August 2024</span>
+                </div>
+                <div class="space-x-2">
+                  <span class="inline-block px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">Python</span>
+                  <span class="inline-block px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">Sails.js</span>
+                  <span class="inline-block px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">Google Colabs</span>
+                </div>
+                <br>
+                
+                <ul class="space-y-2 text-gray-600">
+                  <li>•	Successfully identified and resolved frontend issues on hkbu.cc, a link shortener</li>
+                  <li>•	Developed a data governance system, automating data processes with Pandas Python</li>
+                  <li>•	Developed a GitHub project (Marker) for user-friendly PDF-to-Markdown conversion</li>
+                  <li>•	Presented "Data Governance and Automation Strategy" in the Language Centre's International Conference</li>
+                </ul>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="absolute -left-4 top-0 w-8 h-8 bg-white border-2 border-blue-500 rounded-full"></div>
+              <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-lg font-semibold text-gray-800">Software Engineering Fellow</h3>
+                <div class="flex items-center text-gray-500 mb-4">
+                  <span class="mr-2 font-semibold">Headstarter AI</span>
+                  <span class="px-2 py-1 bg-gray-100 rounded-full text-sm font-semibold">July 2024 - Present </span>
+                </div>
+                <div class="space-x-2">
+                  <span class="inline-block px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">Nextjs</span>
+                  <span class="inline-block px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">TailwindCss</span>
+                  <span class="inline-block px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">Groq API (llama 3) </span>
+                  <span class="inline-block px-2 py-1 bg-blue-100 text-blue-600 rounded-full text-xs font-medium">Stripe API </span>
+                  <br
+                </div>
+                <ul>
+                  <li>•	Built 5+ Al apps and APIs using NextJS, OpenAI, Pinecone, StripeAPl 
+                    
+                    </li>
+                    <li>•	Developed projects from design to deployment leading 4+ engineering fellows using MVC design patterns
+                      </li>
+                      <li>•	Coached by Amazon, Bloomberg and Capital One engineers on Agile, Cl/CD, Git and microservice patterns</li>
+                </ul>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
     <!-- User Specifics -->
-    <div class="flex flex-col md:flex-row justify-between px-4 py-2 space-x-4">
+    <div class="flex flex-col md:flex-row justify-between px-4 py-2 space-x-4 hidden">
         <div class="w-full md:w-1/2 bg-gray-100 p-8 rounded-lg shadow-lg">
           <h2 class="text-2xl font-bold mb-4">Languages</h2>
           <div class="grid grid-cols-2 gap-4">
@@ -220,7 +302,7 @@
           </div>
         </div>
       
-        <div class="w-full md:w-1/2 bg-gray-100 p-10 rounded-lg shadow-lg py-12">
+        <div class="w-full md:w-1/2 bg-gray-100 p-10 rounded-lg shadow-lg py-12 hidden">
           <h2 class="text-2xl font-bold mb-4">Frameworks</h2>
           <div class="grid grid-cols-2 gap-4">
             <div class="bg-white p-4 rounded-lg shadow-md flex items-center">
@@ -260,10 +342,9 @@
         </div>
       </div>
   </section>
-  <section class="bg-gray-100 py-10">
+  <section class="bg-gray-100 py-10 hidden" id="ProjectContainer">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-        <h2 class="text-2xl font-bold text-gray-800">Our Projects</h2>
         <a href="#" class="inline-flex items-center text-blue-500 hover:text-blue-700">
           View All
           <svg class="ml-2 h-5 w-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -271,7 +352,60 @@
           </svg>
         </a>
       </div>
+      
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="UnderDev.jpg" alt="SmartCards" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-gray-800 mb-2">SmartCards</h3>
+            <p class="text-gray-600 mb-4">Personalized learning platform using AI to generate adaptive flashcards developed using Next.js, Node.js, Groq API (llama3), MongoDB, and Stripe API.</p>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-wrap">
+                <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2">NextJS</span>
+                <span class="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2">TailwindCSS</span>
+                <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2">Groq API (llama 3)</span>
+                <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2">Stripe API</span>
+              </div>
+              <a aria-label="My Github Profile" target="_blank" href="https://github.com/BhawishKumarLohana/SmartCards">
+                <i class="fab fa-github-alt text-black-100 hover:text-gray-100 text-3xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="snakegame.jpg" alt="SmartCards" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-gray-800 mb-2">Classic Snake Game</h3>
+            <p class="text-gray-600 mb-4">A classic implementation of the popular Snake Game using HTML, CSS, and JavaScript. Control the snake, eat food, and avoid collisions to score points.</p>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-wrap">
+                <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2">JavaScript</span>
+                <span class="bg-purple-500 text-white px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2">HTML</span>
+                <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2">CSS</span>
+              </div>
+              <a aria-label="My Github Profile" target="_blank" href="https://github.com/BhawishKumarLohana/SmartCards">
+                <i class="fab fa-github-alt text-black-100 hover:text-gray-100 text-3xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <img src="UnderDev.jpg" alt="MunGPT" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-bold text-gray-800 mb-2">MunGPT</h3>
+            <p class="text-gray-600 mb-4">Sophisticated chatbot for Model United Nations (MUN) conferences, providing AI-powered assistance with research, debate preparation, and procedural guidance.</p>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-wrap">
+                <span class="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2">NextJs</span>
+                <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2">Groq API (llama 3)</span>
+                <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-medium mr-2 mb-2">Material UI</span>
+              </div>
+              <a aria-label="My Github Profile" target="_blank" href="https://github.com/BhawishKumarLohana/Mun-Gpt">
+                <i class="fab fa-github-alt text-black-100 hover:text-gray-100 text-3xl"></i>
+              </a>
+            </div>
+          </div>
+        </div>
         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
           <img src="Chess.png" alt="2D Chess in Python Processing" class="w-full h-48 object-cover">
           <div class="p-4">
@@ -322,8 +456,7 @@
         </div>
     </div>
   </section>
-  <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
-    <h2 class="text-2xl font-bold mb-4">Additional Details</h2>
+  <div class="bg-white rounded-lg shadow-lg p-6 mb-8 hidden" id="OtherContainer">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div>
         <h3 class="text-lg font-bold mb-2">My Hobbies</h3>
@@ -367,6 +500,19 @@
   </div>
   
   
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   <script>
     // Set up the scene
@@ -408,6 +554,60 @@
       renderer.render(scene, camera);
     }
     animate();
+
+    const myStoryButton = document.getElementById('myStoryButton');
+  const myStoryContainer = document.getElementById('myStoryContainer');
+  const ExpButton = document.getElementById("ExpButton");
+  const ExpContainer = document.getElementById("ExpContainer");
+  const ProjectButton = document.getElementById("ProjectButton");
+  const ProjectContainer = document.getElementById("ProjectContainer");
+  const OtherButton = document.getElementById("OtherButton");
+  const OtherContainer = document.getElementById("OtherContainer");
+
+  const containers = [
+    myStoryContainer,
+    ExpContainer,
+    ProjectContainer,
+    OtherContainer,
+  ];
+
+  myStoryButton.addEventListener('click', () => {
+    containers.forEach((container) => {
+      container.classList.add('hidden');
+    });
+    myStoryContainer.classList.remove('hidden');
+  });
+
+  ExpButton.addEventListener('click', () => {
+    containers.forEach((container) => {
+      container.classList.add('hidden');
+    });
+    ExpContainer.classList.remove('hidden');
+  });
+
+  ProjectButton.addEventListener('click', () => {
+    containers.forEach((container) => {
+      container.classList.add('hidden');
+    });
+    ProjectContainer.classList.remove('hidden');
+  });
+
+  OtherButton.addEventListener('click', () => {
+    containers.forEach((container) => {
+      container.classList.add('hidden');
+    });
+    OtherContainer.classList.remove('hidden');
+  });
+
+
+
+
+
+
+
+
+
+
   </script>
   <style>
     body {
@@ -432,6 +632,63 @@
     }
 
   </style>
+  <style>
+    .timeline-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #f9fafb;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+  
+    .timeline-item {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+  
+    .timeline-item:before {
+      content: "";
+      position: absolute;
+      top: 0.5rem;
+      left: 0;
+      width: 0.75rem;
+      height: 0.75rem;
+      background-color: #6366f1;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 2px #6366f1;
+    }
+  
+    .timeline-item-content {
+      max-height: 3.5rem;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+  
+    .timeline-item:hover {
+      transform: translateX(0.5rem);
+    }
+  
+    .timeline-item:hover .timeline-item-content {
+      max-height: 500px;
+    }
+  
+    .timeline-item-summary {
+      font-weight: bold;
+      color: #6366f1;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+  <script>
+    function toggleTimelineItem(element) {
+      const description = element.querySelector('p');
+      description.classList.toggle('hidden');
+    }
+  </script>
     
 </body>
 </html>
